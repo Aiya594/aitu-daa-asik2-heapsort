@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class BenchmarkRunner {
     public static void main(String[] args) {
-        int size = (args.length > 0) ? Integer.parseInt(args[0]) : 10000;
+        int size = (args.length > 0) ? Integer.parseInt(args[0]) : 10000; //if there is no user input it will take these vals as default
         int trials = (args.length > 1) ? Integer.parseInt(args[1]) : 5;
 
         CSVWriter csv = new CSVWriter("results.csv");
