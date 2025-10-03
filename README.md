@@ -57,6 +57,9 @@ java -cp target/daa_asik2_heapSort-1.0-SNAPSHOT.jar org.example.Main 20000 10
 Usage:
     java -cp target/daa_asik2_heapSort-1.0-SNAPSHOT.jar org.example.Main [size] [trials]
 
+To run JMH benchmark:
+    java -jar target/daa_asik2_heapSort-1.0-SNAPSHOT-benchmarks.jar
+
 Algorithms:
   --algorithm <name>    Only "heap" supported in this repo
 
