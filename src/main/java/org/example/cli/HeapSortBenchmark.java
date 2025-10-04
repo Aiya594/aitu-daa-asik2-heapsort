@@ -8,11 +8,11 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 @State(Scope.Thread)
-@BenchmarkMode(Mode.AverageTime)          // измеряем среднее время выполнения
-@OutputTimeUnit(TimeUnit.MILLISECONDS)   // выводим в миллисекундах
+@BenchmarkMode(Mode.AverageTime)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class HeapSortBenchmark {
 
-    @Param({"1000", "10000", "50000"})   // размеры массивов для теста
+    @Param({"1000", "10000", "50000"})
     private int size;
 
     private int[] data;
@@ -20,7 +20,7 @@ public class HeapSortBenchmark {
 
     @Setup(Level.Iteration)
     public void setup() {
-        Random random = new Random(12345);  // фиксируем seed для воспроизводимости
+        Random random = new Random(12345);
         data = new int[size];
         for (int i = 0; i < size; i++) {
             data[i] = random.nextInt();
@@ -31,6 +31,6 @@ public class HeapSortBenchmark {
     @Benchmark
     public void heapSortBenchmark() {
         int[] copy = data.clone();
-        HeapSort.heapSort(copy, metrics);  // вызываем HeapSort с метрикой
+        HeapSort.heapSort(copy, metrics);
     }
 }
