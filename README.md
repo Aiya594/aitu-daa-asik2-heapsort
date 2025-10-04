@@ -14,7 +14,10 @@ assignment2-heapsort/
 ├── src/
 │   ├── main/java/org/example/
 │   │   ├── algorithms/HeapSort.java        # Heap Sort implementation
-│   │   ├── cli/BenchmarkRunner.java        # CLI benchmarking tool
+│   │   ├── cli/
+│   │   │     │
+│   │   │     ├── BenchmarkRunner.java        # CLI benchmarking tool
+│   │   │     └── HeapSortBenchmark.java       
 │   │   ├── csvWriter/CSVWriter.java        # CSV writer for metrics
 │   │   └── metrics/Metrics.java            # Performance metrics tracker
 │   └── test/java/algorithms/HeapSortTests.java # JUnit tests
